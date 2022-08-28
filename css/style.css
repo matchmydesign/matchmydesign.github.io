@@ -166,7 +166,7 @@
 @media (max-width: 768px) {
     #header-carousel .carousel-item {
         position: relative;
-        min-height: 450px;
+        min-height: 700px;
     }
 
     #header-carousel .carousel-item img {
@@ -390,10 +390,11 @@
 
 
 
-.pheading{
+.pheading {
     font-size: 30px;
     color: var(--light);
 }
+
 .photo-item .photo-text-more {
     position: absolute;
     z-index: 3;
