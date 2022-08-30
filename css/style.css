@@ -68,6 +68,16 @@
 
 
 /*** Navbar ***/
+
+.header img {
+    height: 50px;
+}
+
+.header span {
+    margin-top: 10px;
+    font-size: 35px;
+}
+
 .navbar.sticky-top {
     top: -100px;
     transition: .5s;
@@ -125,6 +135,16 @@
         visibility: visible;
         transition: .5s;
         opacity: 1;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .header img {
+        height: 30px;
+    }
+
+    .header span {
+        font-size: 20px;
     }
 }
 
