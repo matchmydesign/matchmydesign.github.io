@@ -2,13 +2,48 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <title>MatchMyDesign - Best Mumbai Architects | Interior Designer | Top 10 List of Interior Designers Mumbai</title>
+    <title>MatchMyDesign - Best Mumbai Architects | Interior Designer | Top 10 List of Interior Designers Mumbai |
+        Interior Designer Services | Best Home Interior Design Company in India</title>
+
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta
-        content="MatchMyDesign &amp; is one of the top 10 interior designers in Mumbai. If you need the best green interior designer in Mumbai for residential interior from a huge list then hire us now."
-        name="description" />
+
+    <meta data-n-head="ssr" data-hid="charset" charset="utf-8">
+
+    <meta data-n-head="ssr" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes">
+
+    <meta data-n-head="ssr" data-hid="robots" name="robots" content="index,follow">
+
+    <meta data-n-head="ssr" data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title"
+        content="matchmydesign.com">
+    <meta data-n-head="ssr" data-hid="author" name="author" content="matchmydesign">
+    <meta data-n-head="ssr" data-hid="theme-color" name="theme-color" content="#eb595f">
+    <meta data-n-head="ssr" data-hid="og:title" property="og:title"
+        content="MatchMyDesign | Interior Designer Services | Best Home Interior Design Company in India - matchmydesign">
+
+    <meta data-n-head="ssr" data-hid="twitter:title" name="twitter:title"
+        content="MatchMyDesign | Interior Designer Services | Best Home Interior Design Company in India - matchmydesign">
+
+    <meta data-n-head="ssr" data-hid="description" name="description"
+        content="India's Most Trusted Home Interior Design & Renovation Service Company. Get Expert Interior Designers to Create the Most Beautiful Living Rooms, Dining Rooms, Bedrooms, Bathrooms & More, be it New Home Interiors or Renovation. Book a Consultation with an Expert Interior Designer | MatchMyDesign is one of the top 10 interior designers in Mumbai. If you need the best green interior designer in Mumbai for residential interior from a huge list then hire us now.">
+
+    <meta data-n-head="ssr" data-hid="og:description" property="og:description"
+        content="India's Most Trusted Home Interior Design & Renovation Service Company. Get Expert Interior Designers to Create the Most Beautiful Living Rooms, Dining Rooms, Bedrooms, Bathrooms & More, be it New Home Interiors or Renovation. Book a Consultation with an Expert Interior Designer. - matchmydesign">
+
+    <meta data-n-head="ssr" data-hid="twitter:description" name="twitter:description"
+        content="India's Most Trusted Home Interior Design & Renovation Service Company. Get Expert Interior Designers to Create the Most Beautiful Living Rooms, Dining Rooms, Bedrooms, Bathrooms & More, be it New Home Interiors or Renovation. Book a Consultation with an Expert Interior Designer. - matchmydesign">
+
+
+    <meta data-n-head="ssr" data-hid="keywords" name="keywords"
+        content="interior designer, home interior designer, matchmydesign interior design, matchmydesign designers, interior design company, interior designer company, best interior design, best interior designer, home designer, interior design, room designers, home interior design, house interior, interior home, modern interior design, interior designers, matchmydesign interior, matchmydesign company">
+
+    <meta data-n-head="ssr" data-hid="og:locale" property="og:locale" content="en_IN">
+
+
+    <meta data-n-head="ssr" data-hid="og:type" property="og:type" content="website">
+
+    <meta data-n-head="ssr" data-hid="og:site_name" property="og:site_name" content="matchmydesign India">
+
+    <meta data-n-head="ssr" data-hid="twitter:card" name="twitter:card" content="summary">
 
     <!-- Favicon -->
     <!-- <link href="img/favicon.ico" rel="icon" /> -->
@@ -812,16 +847,20 @@
                         <div class="row g-3">
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control bg-dark border-0" id="gname"
+                                    <input type="text" class="form-control bg-dark border-0" id="name"
                                         placeholder="Name" name="name" />
-                                    <label for="gname">Your Name</label>
+                                    <label for="name">Your Name</label>
+                                    <span id="ename" class="text-danger text-small fadeIn" style="display: none">Invalid
+                                        Name</label>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control bg-dark border-0" id="cname"
+                                    <input type="text" maxlength="10" class="form-control bg-dark border-0" id="phone"
                                         placeholder="Phone Number" name="phone" />
-                                    <label for="cname">Your Mobile</label>
+                                    <label for="phone">Your Mobile</label>
+                                    <span id="ephone" class="text-danger text-small fadeIn"
+                                        style="display: none">Invalid Mobile</label>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -838,10 +877,12 @@
                             </div>
                         </div>
                     </form>
-
-
-
-                    <p>Will! Connect you shortly....</p>
+                    <div class="card" id="leadCreated" style="display: none;height: 4rem;text-align: center;">
+                        <div class="card-body">
+                            <p class="text-success">Thank you very much! will contact you shortly....
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -934,7 +975,7 @@
     <!-- Testimonial End -->
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid bg-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
@@ -1005,7 +1046,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a href="#">Match My Design</a>, All Right Reserved.
+                        &copy; <a href="#" class="text-secondary">Match My Design</a>, All Right Reserved.
                     </div>
                 </div>
             </div>

@@ -53,15 +53,42 @@
             '<i class="bi bi-chevron-right"></i>'
         ]
     });
-    const form = document.forms['appointment'];
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-        debugger
-        console.log(form);
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-            .then(response => console.log('Success!', response))
-            .catch(error => console.error('Error!', error.message))
-    });
 
+    formEvent();
+
+    function validateForm(form) {
+        let status = true;
+        const validationForm = [{ key: 'name', regex: /\S+/ }, { key: 'phone', regex: /^[6-9]\d{9}$/gi }];
+        for (let index = 0; index < form.length; index++) {
+            const el = form[index];
+            const v = validationForm.find((v) => v.key == el.id);
+            if (v && !new RegExp(v.regex).test(el.value)) {
+                status = false;
+                $(`#e${el.id}`).show();
+                break;
+            }
+        }
+        return status;
+    }
+
+
+    function formEvent() {
+        const form = document.forms['appointment'];
+
+        form.addEventListener('change', e => {
+            const el = e.target && e.target.id;
+            el && $(`#e${el}`).hide();
+        });
+
+
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            if (!validateForm(form)) { return; }
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => $('#leadCreated').show() && $('#appointment').hide())
+                .catch(error => alert('Error!', error.message))
+        });
+    }
 })(jQuery);
 
