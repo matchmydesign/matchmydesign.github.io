@@ -223,10 +223,42 @@
 
 .c-div p {
     margin-top: 20px;
-    font-size: 25px;
-    line-height: 1.2;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
+
+/* Filter */
+
+.filter-button {
+    font-size: 20px;
+    text-align: center;
+    color: var(--primary);
+    margin-top: 30px;
+
+}
+
+.filter-button:hover {
+    font-size: 18px;
+    border: 1px solid teal;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: var(--secondary);
+
+}
+
+.active {
+    border-bottom: 1px solid var(--dark);
+}
+
+.port-image {
+    width: 100%;
+}
+
+.gallery_product {
+    margin-bottom: 30px;
+}
 
 
 

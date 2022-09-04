@@ -90,5 +90,35 @@
                 .catch(error => alert('Error!', error.message))
         });
     }
+
+    $(".filter-button").click(function () {
+        removeActiveFilter();
+        $(this).addClass("active");
+        const value = $(this).attr('data-filter');
+        filterPort(value);
+    });
+
+    $(".portfolio").click(function () {
+        const value = $(this).attr('data-in');
+        filterPort(value);
+        removeActiveFilter();
+        $(`#${value}`).addClass("active");
+    });
+
+    function filterPort(value) {
+        if (value == "all") {
+            $('.filter').show('1000');
+        }
+        else {
+            $(".filter").not('.' + value).hide('3000');
+            $('.filter').filter('.' + value).show('3000');
+        }
+    }
+
+    function removeActiveFilter() {
+        if ($(".filter-button").removeClass("active")) {
+            $(this).removeClass("active");
+        }
+    }
 })(jQuery);
 
