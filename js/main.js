@@ -42,8 +42,8 @@
 
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
+        autoplay: false,
+        // smartSpeed: 1000,
         items: 1,
         dots: false,
         loop: true,
@@ -74,13 +74,10 @@
 
     function formEvent() {
         const form = document.forms['appointment'];
-
         form.addEventListener('change', e => {
             const el = e.target && e.target.id;
             el && $(`#e${el}`).hide();
         });
-
-
 
         form.addEventListener('submit', e => {
             e.preventDefault();
@@ -120,5 +117,10 @@
             $(this).removeClass("active");
         }
     }
+
+    $("#bookEvent").click(function () {
+        modelWindow('https://cal.com/match-my-design-vyotwz/30min');
+    })
+
 })(jQuery);
 
