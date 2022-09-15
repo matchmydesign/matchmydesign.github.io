@@ -122,5 +122,13 @@
         modelWindow('https://cal.com/match-my-design-vyotwz/30min');
     })
 
+
+    var popup_btn = $('.popup-btn');
+    popup_btn.magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true
+        }
+    });
 })(jQuery);
 
