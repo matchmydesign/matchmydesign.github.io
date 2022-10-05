@@ -124,11 +124,13 @@
 
 
     var popup_btn = $('.popup-btn');
-    popup_btn.magnificPopup({
-        type: 'image',
-        gallery: {
-            enabled: true
-        }
-    });
+    if (popup_btn && popup_btn.length) {
+        popup_btn.magnificPopup({
+            type: 'image',
+            gallery: {
+                enabled: true
+            }
+        });
+    }
 })(jQuery);
 
