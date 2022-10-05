@@ -210,6 +210,10 @@
     background-size: cover;
 }
 
+.page-header-project {
+    background: #edede9;
+}
+
 .page-header .breadcrumb-item+.breadcrumb-item::before {
     color: #999999;
 }
@@ -549,4 +553,10 @@
     margin-top: 0;
     opacity: 1;
     visibility: visible;
+}
+
+
+.view-more {
+    position: relative;
+    left: 50%;
 }
